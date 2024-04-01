@@ -1,0 +1,20 @@
+s = float(input('Qual seu salário? '))
+
+if s > 4664.68:
+    p = (s*27.5/100) - 896.00
+    print (f'a quantidade de imposto será: {p} e o salário final será: {s - p}')
+
+if s >= 9751.06 and s <= 4664.68:
+    p = (s*27.5/100) - 662.77
+    print (f'a quantidade de imposto será: {p} e o salário final será {s - p}')
+
+if s >= 2826.66 and s <= 3751.05:
+    p = (s*27.5/100) - 381.44
+    print (f'A quantidade de imposto será: {p} e o salário final será {s - p}')
+
+if s >= 2259.21 and s <= 2826.65:
+    p = (s*27.5/100) - 169.44
+    print (f'A quantidade de imposto será: {p} e o salário final será {s - p}')
+
+if s <= 2259.20:
+    print ('Você está insento de imposto de renda')
