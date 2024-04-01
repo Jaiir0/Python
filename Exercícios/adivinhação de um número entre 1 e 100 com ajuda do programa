@@ -1,0 +1,26 @@
+import random 
+import sys
+
+
+inf = 1
+sup = 100
+segredo = random.randint (inf,sup)
+num = 0
+
+print ('=-='*25)
+print ('Escolha um número entre' ,inf ,'e',sup)
+while num != segredo:
+    num = int(input())
+
+    if num > segredo:
+        sup = num
+        print ('=-='*25)
+        print (f'O número está entre {inf}' f' e {sup}')
+    else:
+        if num < segredo:
+            inf = num
+            print ('=-='*25)
+            print (f'O número está entre {inf}' f' e {sup}')
+    if num == segredo:
+        print ('Parabêns você acertou!')
+        sys.exit()
