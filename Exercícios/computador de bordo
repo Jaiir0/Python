@@ -1,0 +1,42 @@
+print ('=-='*27)
+horaI= int(input('Horas que a viagem começou: '))
+minutoI = int(input('Minutos que a viagem começou: '))
+chegadaH = int(input('Horas que a viagem foi finalizada: '))
+chegadaM = int(input('Minutos que a viagem foi finalizada: '))
+segparado = int(input('Segundos descansando: '))
+litros_deg = float(input('Informe a quantidade de combustível gasto em litros: '))
+preço = float(input('Quanto foi pago por litros de combustível: '))  
+distancia = float(input('Informe a distancia percorrida em KM '))
+
+if chegadaH < horaI or chegadaH == horaI and minutoI > chegadaM:
+    tempohora = ((24 - horaI) + chegadaH) * 3600
+    tempomin = (chegadaM * 60) - (minutoI * 60)            #se a hora ultrapassar 24 horas
+    tempo_viagem = (tempohora + tempomin + segparado)
+    
+else:
+    tempohora = (chegadaH * 3600) - (horaI * 3600)
+    tempomin = (chegadaM * 60) - (minutoI * 60)                 #se a hora nao ultrapassar 24 horas
+    tempo_viagem = (tempohora + tempomin + segparado) 
+
+
+print ('=-='*27)
+print (f' O tempo que a viagem durou em segundos foi: {tempo_viagem}')
+
+print ('=-='*27)
+custo = litros_deg * preço
+print(f' O custo da viagem foi: R$ {custo:.2f}') 
+
+
+vlm_movimento = int (distancia  / (tempo_viagem / 3600))     # velocidade sem o tempo parado
+vlm_global  = int (distancia / ((tempo_viagem + segparado) / 3600))     #velocidade media com o tempo parado
+
+
+print ('=-='*27)
+print (f'A velocidade media global é: {vlm_global}  KM/h e a velocidade media em movimento é: {vlm_movimento} KM/h')
+
+kmporL = int (distancia / litros_deg)
+litrosporH = int (litros_deg / (tempo_viagem / 3600))
+custoporKM = (distancia / custo)
+
+print ('=-='*27)
+print (f'O desempenho do veículo foi: \n  KM/l:  {kmporL} \n  Litros/h: {litrosporH} \n  R$/KM: {custoporKM:.2f}')
