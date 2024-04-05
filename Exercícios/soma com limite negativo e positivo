@@ -1,0 +1,17 @@
+print  ('Esse programa faz a soma de todos os números que existem até o limite desejado ')
+l = int(input('Digite um limite '))
+c = 1
+soma = 0
+
+if l > 0:
+    while c <=  l:
+        soma = soma + c
+        c = c + 1
+
+else:
+    c = c - 1
+    while c >= l:
+        soma = soma + c
+        c = c - 1
+
+print (f'A soma dos números será: {soma}')
