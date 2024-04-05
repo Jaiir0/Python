@@ -1,0 +1,37 @@
+tempo = int(input('tempo que o veículo ficou estacionado em minutos '))
+horas = tempo // 60
+if tempo <= 60:
+    valor = 8.00                             #paga pela 1º hora 
+    print (f'você pagará R$ {valor:.2f}') 
+
+elif tempo >= 61 and tempo <= 120:
+    valor = 8.00 * 2                          #paga pela 1º e a 2º hora ou fração da 2º hora
+    print (f'você pagará R$ {valor:.2f}') 
+
+
+elif tempo >= 121 and tempo <= 180:
+    valor = 16.00 + 5.00                     # 2º e a 3º hora ou fração da 3º hora
+    print (f'você pagará R$ {valor:.2f}') 
+
+elif tempo >= 181 and tempo <= 240:
+    valor = 16.00 + (5.00 * 2)              # 3º e a 4ºhora  ou fração da 4º hora
+    print (f'você pagará R$ {valor:.2f}') 
+
+
+elif horas >= 5 and horas <= 11:
+    if tempo % 60 != 0:
+        valor = (16.00 + 10.00) + (3.00 * (1 + horas - 4)) 
+        print (f'você pagará {valor:.2f}')     
+    #se o tempo não for 1 hora exata se adiciona o valor da fraçao ex: 320 minutos == 5 horas e 20 minutos
+    
+    if tempo % 60 == 0:
+        valor = (16.00 + 10.00) + (3.00 * (horas - 4))  
+        print (f'você pagará R$ {valor:.2f}')
+ #se a hora for exata ex: 300 minutos ==5 horas não tem o valor da 6º hora       
+elif tempo == 720:
+    valor = 16.00 + 10 + 24.00
+    print (f'você pagará R$ {valor:.2f}')
+            #se o tempo for exatamente 12 horas
+
+else:
+    print (f'você pagará R$ 30.00 ') # se o tempo for acima de 12 horas
