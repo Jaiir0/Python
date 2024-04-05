@@ -1,0 +1,13 @@
+print ('Esse programa tira a media de notas de uma turma')
+alunos = int(input('Quantos alunos a turma possui? '))
+print ('=-='*27)
+qtde = 1
+soma = 0
+while qtde < alunos:
+    nota = float(input(f'Digite  a nota do {qtde}º aluno '))
+    soma = nota + soma
+    qtde = qtde + 1
+print (qtde)
+media = soma  / qtde
+print ('=-='*27)
+print (f'A media da turma foi: {media}')
