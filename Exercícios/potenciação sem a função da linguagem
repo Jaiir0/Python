@@ -1,0 +1,13 @@
+# programa que calcula o potenciação sem a função de potentecia da linguagem, exemplo: 2**3
+
+base = int(input('diga a base: '))
+exp = int(input('diga o expoente: '))
+vzs = 1
+base_antiga = base
+
+while vzs < exp:
+    base = base_antiga * base
+    vzs = vzs + 1
+
+print ('=-='*32)
+print(f'A resposta é: {base}')
