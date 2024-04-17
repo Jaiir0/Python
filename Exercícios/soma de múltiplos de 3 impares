@@ -1,0 +1,11 @@
+qtde = 0
+soma = 0
+
+for c in range (0,501):
+    if c % 2 != 0:
+        if c % 3 == 0:
+            soma +=c
+            qtde += 1
+            print (c)
+        
+print (f'Foram {qtde} números e a soma dos número impares multiplos de 3 são: {soma} ')
