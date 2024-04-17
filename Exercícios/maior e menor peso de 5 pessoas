@@ -1,0 +1,7 @@
+lista= [] 
+
+for c in range (1,6):
+    lista.append(int(input (f'Qual o peso da {c}ª pessoa? '))) 
+    
+print (f'O maior foi: {max(lista)}') 
+print (f'O menor foi: {min(lista)}')
