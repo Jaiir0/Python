@@ -1,2 +1,2 @@
 # Python
-🐍 - Estudando Python
+🐍 - Estudando Python do 0
